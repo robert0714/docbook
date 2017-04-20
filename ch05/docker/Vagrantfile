@@ -17,8 +17,9 @@ gpasswd -a ubuntu docker
 service docker restart
 curl -L https://github.com/docker/compose/releases/download/1.11.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
-apt-get install -y kubelet kubeadm kubectl kubernetes-cni
+
 SCRIPT
+#apt-get install -y kubelet kubeadm kubectl kubernetes-cni
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
